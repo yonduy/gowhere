@@ -8,14 +8,22 @@
     <div class="header-input">
         <span class="iconfont">&#xe632;</span>
         输入景点/城市/游玩主题</div>
-    <div class="header-right">城市
+        <router-link to="/city">
+    <div class="header-right">{{this.city}}
         <span class="iconfont arrow-icon">&#xe62d;</span>
     </div>
+</router-link>
 </div>
 </template>
 
 <script>
-export default {name: 'homeheader'
+export default
+{
+  name: 'homeheader',
+  props: {
+    city: String
+  }
+
 }
 </script>
 <style lang="stylus" scoped>
@@ -43,6 +51,7 @@ export default {name: 'homeheader'
             border-radius: .1rem
             color: #ccc
         .header-right
+            color: #fff
             width: 1.24rem
             float: right
             text-align: center
