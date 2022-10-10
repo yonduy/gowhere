@@ -2,7 +2,7 @@
     <div>
     <div class="title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img  class="item-img" :src="item.imgUrl">
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
@@ -17,27 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1601/e1/e19f8470b726162d90.water.jpg_256x160_5b3a110d.jpg',
-        title: '丹霞山',
-        desc: '露天的地质博物馆'
-      },
-      {
-        id: '0002',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1601/e1/e19f8470b726162d90.water.jpg_256x160_5b3a110d.jpg',
-        title: '丹霞山',
-        desc: '露天的地质博物馆'
-      },
-      {
-        id: '0003',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1601/e1/e19f8470b726162d90.water.jpg_256x160_5b3a110d.jpg',
-        title: '丹霞山',
-        desc: '露天的地质博物馆'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
